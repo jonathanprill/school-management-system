@@ -37,7 +37,7 @@ public class HibernateUtil {
 	public static Connection setConnection() throws ClassNotFoundException, SQLException {
 		String url = "jdbc:mysql://localhost:3306/smsdb";
 		String user = "root";
-		String password = "WellyisC00l!";
+		String password = "root";
 
 		Class.forName("com.mysql.cj.jdbc.Driver");
 
