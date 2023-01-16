@@ -30,11 +30,5 @@ to a new class. They are then shown a full list of all classes available in the 
 Once they make a selection, that selection is added to their course list and they are automatically logged out.
 
 
-## Description
-
-If you want to run this app on your local machine you can clone or download the zip file from github. Install Node and MySQL if you do not already have them. In the root directory, create a .env file with your mySQL credentials. Then in your terminal type 'npm install' and press enter. You are now all set to use the app!
-
-
-
 ## Questions
 Reach out via my [Github Profile](https://github.com/jonathanprill)
