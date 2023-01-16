@@ -19,10 +19,6 @@
     <img src="https://img.shields.io/badge/Hibernate-green" />
     <img src="https://img.shields.io/badge/-junit-purple" />
     <img src="https://img.shields.io/badge/mySQL-orange"  />
-    <img src="https://img.shields.io/badge/-node.js-green" />
-    <img src="https://img.shields.io/badge/-Insomnia-purple" />
-    <img src="https://img.shields.io/badge/-Leaflet-green" />
-    <img src="https://img.shields.io/badge/-Multer-red" />
 </p>
 
 
@@ -33,15 +29,6 @@ Once signed in, they are shown a list of their enlisted classes. The user is the
 to a new class. They are then shown a full list of all classes available in the database.
 Once they make a selection, that selection is added to their course list and they are automatically logged out.
 
-
-## Table of Contents 
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing Guidlines](#contributing-guidlines)
-- [Test Instructions](#test-instructions)
-- [Questions](#questions)
 
 ## Description
 
