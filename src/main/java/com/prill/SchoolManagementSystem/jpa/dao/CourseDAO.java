@@ -12,8 +12,17 @@ import com.prill.SchoolManagementSystem.jpa.entitymodels.Course;
  */
 public interface CourseDAO {
 	
+	/**
+	 * This method gets all courses and returns a list of type Course 
+	 * @return
+	 */
 	List<Course> getAllCourses();
 	
+	/**
+	 * This method gets one course by cId and return one type Course
+	 * @param cId
+	 * @return
+	 */
 	Course getCourseById(int cId);
 
 }

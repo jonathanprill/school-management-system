@@ -1,7 +1,6 @@
 package com.prill.SchoolManagementSystem;
 
 import java.util.Scanner;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -12,16 +11,15 @@ import com.prill.SchoolManagementSystem.jpa.service.CourseService;
 import com.prill.SchoolManagementSystem.jpa.service.StudentService;
 import com.prill.SchoolManagementSystem.jpa.util.HibernateUtil;
 
-
 /**
- * The School Menu is what prompts the user to makes selections. 
- * It also defines the overall flow of the user experience.
+ * The School Menu is what prompts the user to makes selections. It also defines
+ * the overall flow of the user experience.
  * 
  * @author Jonathan Prill
  *
  */
 public class SchoolMenu {
-	 static Session session = HibernateUtil.getConnection();
+	static Session session = HibernateUtil.getConnection();
 	static Transaction t = session.beginTransaction();
 	private String sEmail;
 	private String sPass;
@@ -30,6 +28,10 @@ public class SchoolMenu {
 	CourseDAO courseQuery = new CourseService();
 	Scanner input = new Scanner(System.in);
 
+	
+	/**
+	 * This method runs the school management menu and returns nothing
+	 */
 	public void runSchoolMenu() {
 		System.out.println("Welcome");
 		int userSelection;
@@ -62,18 +64,22 @@ public class SchoolMenu {
 					userSelection2 = input.nextInt();
 					switch (userSelection2) {
 					case 1:
-//						System.out.println("\nAll Courses:\n");
 						courseQuery.getAllCourses();
 						System.out.println("\nWhich course would you like to register for?");
 						System.out.println("Enter a number: ");
-						courseSelection = input.nextInt();						
-						Course newlyAddedCourse = courseQuery.getCourseById(courseSelection);
-						query.registerStudentToCourse(userEmail, newlyAddedCourse);
-						t.commit();
-						session.close();
-						System.out.println("You're new course has been added.");
-						System.out.println("Signing out...");
-						System.exit(0);
+						courseSelection = input.nextInt();
+						try {
+							Course newlyAddedCourse = courseQuery.getCourseById(courseSelection);
+							query.registerStudentToCourse(userEmail, newlyAddedCourse);
+							t.commit();
+							session.close();
+							System.out.println("You're new course has been added.");
+							System.out.println("Signing out...");
+							System.exit(0);
+						} catch (Exception e) {
+							System.out.println("You entered an invalid course number!");
+						} 
+						
 					case 2:
 						System.out.println("You have been signed out.");
 						System.exit(0);

@@ -17,6 +17,10 @@ import org.hibernate.cfg.Configuration;
  */
 public class HibernateUtil {
 
+	/**
+	 * This method gets connection to the database
+	 * @return
+	 */
 	public static Session getConnection() {
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
@@ -25,7 +29,7 @@ public class HibernateUtil {
 	}
 
 	/**
-	 * the password may need to be changed based on you MySQL credentials.
+	 * Sets connection to database. The password may need to be changed based on you MySQL credentials.
 	 * @return
 	 * @throws ClassNotFoundException
 	 * @throws SQLException
@@ -33,7 +37,7 @@ public class HibernateUtil {
 	public static Connection setConnection() throws ClassNotFoundException, SQLException {
 		String url = "jdbc:mysql://localhost:3306/smsdb";
 		String user = "root";
-		String password = "root";
+		String password = "WellyisC00l!";
 
 		Class.forName("com.mysql.cj.jdbc.Driver");
 

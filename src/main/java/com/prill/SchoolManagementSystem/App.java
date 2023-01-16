@@ -39,6 +39,10 @@ public class App {
 
 	}
 
+	
+	/**
+	 * This method seeds the database and returns nothing
+	 */
 	public static void seedDatabase() {
 
 		Course course1 = new Course("English", "Anderea Scamaden");
