@@ -21,6 +21,10 @@
     <img src="https://img.shields.io/badge/mySQL-orange"  />
 </p>
 
+## Up and Running
+To Run this project, navigate to the main method, right click and click run. This should start up the Menu in the console.
+If the database is empty, try uncommenting the seed method to populate the databse with students and courses. 
+Once seeded there is a test@email.com with a password of pass which can be used to login and use the application.
 
 ## Description
 
